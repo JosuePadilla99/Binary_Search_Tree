@@ -20,6 +20,10 @@ public:
         move_right->setRightPtr(nullptr);
     }
 
+    BinaryTreeNode* getParentPtr() const;
+    BinaryTreeNode* getLeftPtr() const;
+    BinaryTreeNode* getRightPtr() const;
+
     void insert(int value);
     void findNode(BinaryTreeNode* node, int nodeValue);
     void preOrderTraversal(BinaryTreeNode* node);
