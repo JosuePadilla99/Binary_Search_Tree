@@ -6,26 +6,26 @@
 
 class BinarySearchTree{
 private:
-    BinaryTreeNode* parent_node;
+    BinaryTreeNode* root_node;
     BinaryTreeNode* move_left;
     BinaryTreeNode* move_right;
 
 public:
     BinarySearchTree(){
-        parent_node = new BinaryTreeNode();
+        root_node = new BinaryTreeNode();
         move_left = new BinaryTreeNode();
         move_right = new BinaryTreeNode();
-        parent_node->setParentPtr(nullptr);
+        root_node->setRootPtr(nullptr);
         move_left->setLeftPtr(nullptr);
         move_right->setRightPtr(nullptr);
     }
 
-    BinaryTreeNode* getParentPtr() const;
+    BinaryTreeNode* getRootPtr() const;
     BinaryTreeNode* getLeftPtr() const;
     BinaryTreeNode* getRightPtr() const;
 
     void insert(int value);
-    void findNode(BinaryTreeNode* node, int nodeValue);
+    BinaryTreeNode* findNode(int nodeValue);
     void preOrderTraversal(BinaryTreeNode* node);
     void inOrderTraversal(BinaryTreeNode* node);
     void postOrderTraversal(BinaryTreeNode* node);

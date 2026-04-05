@@ -5,9 +5,22 @@
 using namespace std;
 int main(){
     BinarySearchTree utilObj;
+    BinaryTreeNode* utilNode;
     string prompt;
     string start;
     int caseNum;
+
+    utilObj.insert(10);
+    utilObj.insert(5);
+    utilObj.insert(6);
+    utilObj.insert(16);
+    utilObj.insert(4);
+    utilObj.insert(19);
+    utilObj.insert(17);
+    utilObj.insert(21);
+    cout << "TEST" << endl;
+    cout << "Node that was found is: " << utilObj.findNode(5) << endl;
+    utilObj.preOrderTraversal(utilNode->getRootPtr());
 
     // cout << "Would you like to start the program" << endl;
     // cin >> start;
