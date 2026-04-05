@@ -7,7 +7,7 @@
 class BinaryTreeNode{
 private:
    int value;
-   BinaryTreeNode* parent;
+   BinaryTreeNode* root;
    BinaryTreeNode* right;
    BinaryTreeNode* left;
 public:
@@ -20,13 +20,13 @@ public:
 
     //accessor methods
     int getValue() const{return value;}
-    BinaryTreeNode* getParentPtr()const {return parent;}
+    BinaryTreeNode* getRootPtr()const {return root;}
     BinaryTreeNode* getLeftPtr()const {return left;}
     BinaryTreeNode* getRightPtr()const {return right;}
 
     //mutator methods
     void setValue(int setValue) {value = setValue;}
-    void setParentPtr(BinaryTreeNode* setParent) {parent = setParent;}
+    void setRootPtr(BinaryTreeNode* setRoot) {root = setRoot;}
     void setLeftPtr(BinaryTreeNode* setLeftPtr) {left = setLeftPtr;}
     void setRightPtr(BinaryTreeNode* setRightPtr) {right = setRightPtr;}
 
