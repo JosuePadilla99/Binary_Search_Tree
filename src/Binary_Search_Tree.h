@@ -2,6 +2,7 @@
 #define BINARY_SEARCH_TREE
 
 #include <iostream>
+#include <algorithm>
 #include "Binary_Tree_Node.h"
 
 class BinarySearchTree{
@@ -12,24 +13,29 @@ private:
 
 public:
     BinarySearchTree(){
-        root_node = new BinaryTreeNode();
-        move_left = new BinaryTreeNode();
-        move_right = new BinaryTreeNode();
-        root_node->setRootPtr(nullptr);
-        move_left->setLeftPtr(nullptr);
-        move_right->setRightPtr(nullptr);
+        root_node = nullptr;
+        move_left = nullptr;
+        move_right = nullptr;
     }
+    // BinarySearchTree(){
+    //     root_node = new BinaryTreeNode();
+    //     move_left = new BinaryTreeNode();
+    //     move_right = new BinaryTreeNode();
+    //     root_node->setRootPtr(nullptr);
+    //     move_left->setLeftPtr(nullptr);
+    //     move_right->setRightPtr(nullptr);
+    // }
 
     BinaryTreeNode* getRootPtr() const;
     BinaryTreeNode* getLeftPtr() const;
     BinaryTreeNode* getRightPtr() const;
 
     void insert(int value);
-    BinaryTreeNode* findNode(int nodeValue);
+    BinaryTreeNode* findNode(BinaryTreeNode* root, int nodeValue);
     void preOrderTraversal(BinaryTreeNode* node);
     void inOrderTraversal(BinaryTreeNode* node);
     void postOrderTraversal(BinaryTreeNode* node);
-    void findHeight(BinaryTreeNode* node);
+    int findHeight(BinaryTreeNode* node);
 };
 
 #endif

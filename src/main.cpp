@@ -5,7 +5,6 @@
 using namespace std;
 int main(){
     BinarySearchTree utilObj;
-    BinaryTreeNode* utilNode;
     string prompt;
     string start;
     int caseNum;
@@ -18,9 +17,13 @@ int main(){
     utilObj.insert(19);
     utilObj.insert(17);
     utilObj.insert(21);
-    cout << "TEST" << endl;
-    cout << "Node that was found is: " << utilObj.findNode(5) << endl;
-    utilObj.preOrderTraversal(utilNode->getRootPtr());
+    
+    cout << "Node that was found is: " << utilObj.findNode(utilObj.getRootPtr(), 5)->getValue() << endl;
+    utilObj.preOrderTraversal(utilObj.getRootPtr());
+    utilObj.inOrderTraversal(utilObj.getRootPtr());
+    utilObj.postOrderTraversal(utilObj.getRootPtr());
+    int height = utilObj.findHeight(utilObj.getRootPtr());
+    cout << "Height of BST is: " << height << endl;
 
     // cout << "Would you like to start the program" << endl;
     // cin >> start;
