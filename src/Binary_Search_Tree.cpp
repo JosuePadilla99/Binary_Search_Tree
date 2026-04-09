@@ -40,7 +40,6 @@ void BinarySearchTree::insert(int value){
             current = current->getLeftPtr(); // continue to traverse left if condition is not met
         }
         else{
-            //delete newNode;
             return;
         }
         

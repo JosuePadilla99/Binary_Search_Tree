@@ -17,15 +17,7 @@ public:
         move_left = nullptr;
         move_right = nullptr;
     }
-    // BinarySearchTree(){
-    //     root_node = new BinaryTreeNode();
-    //     move_left = new BinaryTreeNode();
-    //     move_right = new BinaryTreeNode();
-    //     root_node->setRootPtr(nullptr);
-    //     move_left->setLeftPtr(nullptr);
-    //     move_right->setRightPtr(nullptr);
-    // }
-
+    
     BinaryTreeNode* getRootPtr() const;
     BinaryTreeNode* getLeftPtr() const;
     BinaryTreeNode* getRightPtr() const;
