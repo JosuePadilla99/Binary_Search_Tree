@@ -45,7 +45,6 @@ void constructMinHeightBST(BinarySearchTree& bstObj, int* arr, int start, int en
     if(start > end){
         return;
     }
-    cout << "TEST" << endl;
     int mid = (start + end) /2;
     bstObj.insert(arr[mid]);
 
